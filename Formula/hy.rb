@@ -5,28 +5,28 @@
 class Hy < Formula
   desc "CLI for Hypewell Studio"
   homepage "https://hypewell.ai"
-  version "0.1.0"
+  version "0.2.0"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hypewell-ai/hy/releases/download/v0.1.0/hy_0.1.0_darwin_amd64.tar.gz"
-      sha256 "1afcc25ef26ed8de600a8632d6b5ab3fee167e27ccc143a2d6271b3792aa8b0a"
+      url "https://github.com/hypewell-ai/hy/releases/download/v0.2.0/hy_0.2.0_darwin_amd64.tar.gz"
+      sha256 "6331cbf55ace57f58651a749dd85bd9ed819067c11da6c3c72e5060d32c5bf6c"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hypewell-ai/hy/releases/download/v0.1.0/hy_0.1.0_darwin_arm64.tar.gz"
-      sha256 "faa10529121b573c2f2d14d3a27287efa749b3687d0058cf4170f615541d8fb5"
+      url "https://github.com/hypewell-ai/hy/releases/download/v0.2.0/hy_0.2.0_darwin_arm64.tar.gz"
+      sha256 "6138733b65a24780813de795f07ed02a3ee5f567ffe8ed490d8dc340b008d5a2"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/hypewell-ai/hy/releases/download/v0.1.0/hy_0.1.0_linux_amd64.tar.gz"
-      sha256 "a90b914aa30b8be626de0b87f1e9dbd1c0c564d7f81766dacc8b9526cfe55145"
+      url "https://github.com/hypewell-ai/hy/releases/download/v0.2.0/hy_0.2.0_linux_amd64.tar.gz"
+      sha256 "da6ad7fae0c8ecbecac83c593b751e76747ce19cacb85047cf89cf75f4bd421f"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hypewell-ai/hy/releases/download/v0.1.0/hy_0.1.0_linux_arm64.tar.gz"
-      sha256 "0da3803e2ae934345a610ddfb24b0dc4603f785b409903fa74c7fa9fad81aa6e"
+      url "https://github.com/hypewell-ai/hy/releases/download/v0.2.0/hy_0.2.0_linux_arm64.tar.gz"
+      sha256 "7dacdda2b1a265e9325db04c40044ab6202643d04b6210ca5aaf99ba45ccd614"
     end
   end
 
