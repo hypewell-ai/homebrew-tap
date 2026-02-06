@@ -5,33 +5,43 @@
 class Hy < Formula
   desc "CLI for Hypewell Studio"
   homepage "https://hypewell.ai"
-  version "0.2.0"
+  version "0.2.1"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hypewell-ai/hy/releases/download/v0.2.0/hy_0.2.0_darwin_amd64.tar.gz"
-      sha256 "6331cbf55ace57f58651a749dd85bd9ed819067c11da6c3c72e5060d32c5bf6c"
+      url "https://github.com/hypewell-ai/hy/releases/download/v0.2.1/hy_0.2.1_darwin_amd64.tar.gz"
+      sha256 "040520e6a692e3e113eb4aadeb2736066f24d65b3d08d6f8c5b51a53951dd859"
+
+      def install
+        bin.install "hy"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hypewell-ai/hy/releases/download/v0.2.0/hy_0.2.0_darwin_arm64.tar.gz"
-      sha256 "6138733b65a24780813de795f07ed02a3ee5f567ffe8ed490d8dc340b008d5a2"
+      url "https://github.com/hypewell-ai/hy/releases/download/v0.2.1/hy_0.2.1_darwin_arm64.tar.gz"
+      sha256 "067c2f5ae7e171b34628924ecf807e7f0bd48031acb2f95ef582557e6c254e59"
+
+      def install
+        bin.install "hy"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/hypewell-ai/hy/releases/download/v0.2.0/hy_0.2.0_linux_amd64.tar.gz"
-      sha256 "da6ad7fae0c8ecbecac83c593b751e76747ce19cacb85047cf89cf75f4bd421f"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/hypewell-ai/hy/releases/download/v0.2.1/hy_0.2.1_linux_amd64.tar.gz"
+      sha256 "ce61490ba544b3f767c797afe11eb23674ef651d006b652d98d491f61c56c5ed"
+      def install
+        bin.install "hy"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hypewell-ai/hy/releases/download/v0.2.0/hy_0.2.0_linux_arm64.tar.gz"
-      sha256 "7dacdda2b1a265e9325db04c40044ab6202643d04b6210ca5aaf99ba45ccd614"
+      url "https://github.com/hypewell-ai/hy/releases/download/v0.2.1/hy_0.2.1_linux_arm64.tar.gz"
+      sha256 "7a764a30c086ed70df8dde44b3fdba6b798041baeaabc9ae37b3156d497eae06"
+      def install
+        bin.install "hy"
+      end
     end
-  end
-
-  def install
-    bin.install "hy"
   end
 
   test do
